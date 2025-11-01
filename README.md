@@ -2,20 +2,31 @@
 
 Overview:
 -This project implements a decentralized lottery system on the Ethereum blockchain, where participants can enter by contributing 0.1 ETH. Once enough players join, the manager (contract deployer) can trigger the winner selection, and the entire balance is transferred to the winner.
+
 -The randomness is generated using on-chain variables like block.prevrandao, ensuring pseudo-random selection within the constraints of Solidity.
+
 -This contract was deployed and tested on the Sepolia Testnet using MetaMask for transactions and Remix IDE for deployment and execution.
 
 Features:
+
 Fair Participation – Each player enters with exactly 0.1 ETH.
+
 Pseudo-Random Winner Selection – Uses keccak256 and block.prevrandao.
+
 Admin Controls – Only the manager (deployer) can view balance or pick the winner.
+
 Automatic Reset – After a winner is selected, the player list resets for a new round.
+
 Tested on Sepolia Network – Zero-cost deployment using Ethereum test tokens.
 
 Tech Stack:
+
 -Solidity (v0.8.0)
+
 -Remix IDE for contract deployment and interaction
+
 -MetaMask for transaction signing and wallet management
+
 -Sepolia Testnet for deployment and operational cost testing
 
 Deployment Steps:

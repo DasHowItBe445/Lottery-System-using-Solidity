@@ -1,6 +1,7 @@
 # Lottery System
 
 Overview:
+
 -This project implements a decentralized lottery system on the Ethereum blockchain, where participants can enter by contributing 0.1 ETH. Once enough players join, the manager (contract deployer) can trigger the winner selection, and the entire balance is transferred to the winner.
 
 -The randomness is generated using on-chain variables like block.prevrandao, ensuring pseudo-random selection within the constraints of Solidity.
@@ -32,21 +33,35 @@ Tech Stack:
 Deployment Steps:
  
  1] Set Up Environment-
+
 -> Install MetaMask https://metamask.io/
+
 -> Configure it for the Sepolia Test Network
+
 -> Get free Sepolia ETH from a https://sepolia-faucet.pk910.de/
 
+
 2] Deploy the Contract-
+
 -> Open https://remix.ethereum.org/
+
 -> Paste the contract code into a new file
+
 -> Select Solidity Compiler v0.8.0 → Compile
+
 -> Under Deploy & Run Transactions, select Injected Provider - MetaMask
+
 -> Deploy the contract
 
+
 3] Interact with the Contract-
+
 -> Use the receive() function by sending 0.1 ETH to the contract address
+
 -> Repeat for at least 3 players
+
 -> As the manager, call pickWinner() to randomly select the winner
+
 -> Use getBalance() to verify contract balance before and after
 
 Example Workflow:

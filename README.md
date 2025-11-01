@@ -8,6 +8,7 @@ Overview:
 
 -This contract was deployed and tested on the Sepolia Testnet using MetaMask for transactions and Remix IDE for deployment and execution.
 
+
 Features:
 
 Fair Participation – Each player enters with exactly 0.1 ETH.
@@ -20,6 +21,7 @@ Automatic Reset – After a winner is selected, the player list resets for a new
 
 Tested on Sepolia Network – Zero-cost deployment using Ethereum test tokens.
 
+
 Tech Stack:
 
 -Solidity (v0.8.0)
@@ -29,6 +31,7 @@ Tech Stack:
 -MetaMask for transaction signing and wallet management
 
 -Sepolia Testnet for deployment and operational cost testing
+
 
 Deployment Steps:
  
@@ -64,18 +67,31 @@ Deployment Steps:
 
 -> Use getBalance() to verify contract balance before and after
 
+
 Example Workflow:
+
 1] Player 1, 2, and 3 each send 0.1 ETH → Contract balance = 0.3 ETH
+
 2] Manager calls pickWinner() → Random player receives all 0.3 ETH
+
 3] Contract resets for the next round
 
+
 Security Considerations:
+
 -> Only the manager can access sensitive functions (getBalance, pickWinner).
+
 -> Uses pseudo-randomness from on-chain data (suitable for demos and testnets).
+
 -> Not recommended for mainnet deployment without using a secure randomness source (e.g., Chainlink VRF).
 
+
 Future Enhancements:
+
 -> Integrate Chainlink VRF for verifiable randomness.
+
 -> Add frontend UI for easy participation via MetaMask.
+
 -> Enable event logging for winner announcements.
+
 -> Extend to multi-round automatic lotteries.
